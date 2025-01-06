@@ -1,8 +1,8 @@
-
+import { Link } from "react-router"
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -22,36 +22,28 @@ const Header = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Item 1</a></li>
                             <li>
-                                <a>Parent</a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
+                                <Link to="/contacts">Contanct List</Link>
                             </li>
-                            <li><a>Item 3</a></li>
+                            <li>
+                                <Link to="/add-contact">Add New Contact</Link>
+                            </li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <Link to="/" className="btn btn-ghost text-xl">CONTACTS</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
                         <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
+                            <Link to="/contacts">Contact List</Link>
                         </li>
-                        <li><a>Item 3</a></li>
+                        <li>
+                            <Link to="/add-contact">Add New Contact</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link className="btn" to="/sign-in">Sign In</Link>
                 </div>
             </div>
         </div>
